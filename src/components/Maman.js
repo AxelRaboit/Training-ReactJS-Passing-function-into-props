@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import Enfant from './Enfant';
+import React, { Component } from 'react'
+import Enfant from './Enfant'
 
 class Maman extends Component {
 
     state = {
         messageMaman: null,
-        messageEnfant: null 
+        messageEnfant: null
     }
 
     momsOrder = () => {
@@ -16,7 +16,7 @@ class Maman extends Component {
 
     childAnswer = () => {
         this.setState({
-            messageEnfant: "D'accord Maman"
+            messageEnfant: "D'accord maman !"
         })
     }
 
@@ -27,12 +27,9 @@ class Maman extends Component {
                 <button onClick={this.momsOrder}>Ordre de la maman</button>
                 <p>{this.state.messageMaman}</p>
                 <hr />
-
-                <h2>Enfant</h2>
-                <Enfant name="Jean" childReponse={this.childAnswer} theState={this.state} />
-
+                <Enfant name="Axel" childAns={this.childAnswer} parentState={this.state} />
             </div>
-        );
+        )
     }
 }
 

@@ -1,20 +1,21 @@
-import React from 'react'
+import React from 'react';
 
 const Enfant = (props) => {
 
     console.log(props)
 
-    const childAnswerButton = props.theState.messageMaman !== null 
-        ? (<button onClick={props.childReponse}>Réponse</button>)
-        : (<button disabled>Réponse</button>)
+    const childAnswerButton = props.parentState.messageMaman !== null 
+        ? (<button onClick={props.childAns}>Répondre</button>)
+        : (<button disabled>Répondre</button>)
 
     return (
         <div>
             <h2>{props.name}</h2>
             {childAnswerButton}
-            <p>{props.theState.messageEnfant}</p>
+            <p>{props.parentState.messageEnfant}</p>
         </div>
-    )
+    );
 }
 
 export default Enfant;
+
