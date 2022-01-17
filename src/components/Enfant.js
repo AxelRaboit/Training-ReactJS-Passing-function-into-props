@@ -8,6 +8,13 @@ const Enfant = (props) => {
         ? (<button onClick={props.giveAnswer}>Answer</button>)
         : (<button disabled>Answer</button>)
 
+    /* const answerButton = (() => {
+        if (props.parentState.MomMessage !== null)
+            return <button onClick={props.giveAnswer}>Answer</button>;
+        else
+            return <button disabled>Answer</button>;
+    })(); */
+
     return (
         <div>
             <h2>{props.parentState.ChildTitle}: {props.name}</h2>
